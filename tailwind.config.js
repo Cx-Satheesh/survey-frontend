@@ -9,6 +9,15 @@ module.exports = {
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
   		},
+		boxShadow: {
+			'custom-card': '0 4px 30px rgba(21, 63, 87, 0.05)',
+		},
+		padding: {
+			'ls': '10px',  
+			'lsm': '20px',  
+			'lmd': '30px',
+			'llg': '50px', 
+		  },
   		colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',

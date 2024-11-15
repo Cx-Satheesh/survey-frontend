@@ -1,38 +1,20 @@
-import { Home } from "lucide-react";
-import { Sidebar, SidebarContent, SidebarGroup, SidebarGroupContent, SidebarGroupLabel, SidebarMenu, SidebarMenuButton, SidebarMenuItem } from "../../components/ui/sidebar";
+import { LayoutDashboard } from "lucide-react";
 
-// Menu items.
-const items = [
-    {
-      title: "Home",
-      url: "#",
-      icon: Home,
-    }
-  ]
-  
-  export function AppSidebar() {
+const AppSidebar: React.FC = () => {
     return (
-        <Sidebar>
-        <SidebarContent>
-          <SidebarGroup>
-            <SidebarGroupLabel>Application</SidebarGroupLabel>
-            <SidebarGroupContent>
-              <SidebarMenu>
-                {items.map((item) => (
-                  <SidebarMenuItem key={item.title}>
-                    <SidebarMenuButton asChild>
-                      <a href={item.url}>
-                        <item.icon />
-                        <span>{item.title}</span>
-                      </a>
-                    </SidebarMenuButton>
-                  </SidebarMenuItem>
-                ))}
-              </SidebarMenu>
-            </SidebarGroupContent>
-          </SidebarGroup>
-        </SidebarContent>
-      </Sidebar>
+     <div className="z-10 fixed top-0 left-0 w-[250px] h-full bg-white shadow-custom-card">
+        <div className="flex items-center px-lsm h-[60px] border-b border-b-[#EEEEEE] font-bold">
+            Survey
+        </div>
+        <ul>
+          <li className="flex items-center px-lsm py-lsm border-b border-[#EEEEEE]">
+              <LayoutDashboard size={14} />
+              <div className="text-[14px] ml-[7px]">Dashboard</div>
+          </li>
+        </ul>
+     </div>
     )
-  }
+}
   
+
+export default AppSidebar;

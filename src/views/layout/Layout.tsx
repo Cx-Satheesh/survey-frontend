@@ -1,6 +1,6 @@
 import React from 'react';
-import { AppSidebar } from './AppSidebar';
-import { SidebarProvider, SidebarTrigger } from '../../components/ui/sidebar';
+import AppSidebar from './AppSidebar';
+import AppHeader from './AppHeader';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -8,13 +8,15 @@ interface LayoutProps {
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
-    <SidebarProvider>
+    <>
       <AppSidebar />
-      <main>
-        <SidebarTrigger />
-        {children}
-      </main>
-    </SidebarProvider>
+      <AppHeader />
+      <div className='pl-[250px] pt-[60px]'>
+        <main>
+          {children}
+        </main>
+      </div>
+    </>
   );
 };
 

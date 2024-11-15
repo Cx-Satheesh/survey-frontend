@@ -7,7 +7,7 @@ import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Toolti
 // Registering necessary components for Chart.js
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 
-const ChartComponent: React.FC = () => {
+const BarChartComponent: React.FC = () => {
   // Sample data for the chart
   const data = {
     labels: ['January', 'February', 'March', 'April', 'May', 'June'], // X-axis labels
@@ -41,4 +41,4 @@ const ChartComponent: React.FC = () => {
   );
 };
 
-export default ChartComponent;
+export default BarChartComponent;
